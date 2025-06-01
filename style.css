@@ -1,0 +1,38 @@
+body {
+  background-color: #fcf5e4;
+}
+* {
+  font-family: jetbrainsmono nerd font mono;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.intro-box {
+  max-width: 700px;
+  background-color: #353535;
+  padding: 10px 20px;
+  margin: 40px auto;
+  border-radius: 15px;
+}
+.intro-box>* {
+  font-size: 18px;
+  color: whitesmoke;
+}
+
+@keyframes blink-block {
+  0%, 100% { 
+    visibility: visible;
+  }
+  50% { 
+    visibility: hidden;
+  }
+}
+.blinking-cursor {
+  display: inline-block;
+  width: 1ch;
+  height: 1.25em;
+  background-color: currentcolor;
+  animation: blink-block 1s steps(1, start) infinite;
+  vertical-align: text-bottom;
+}
