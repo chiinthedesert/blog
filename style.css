@@ -10,40 +10,59 @@ body {
 
 .main-container {
   max-width: 700px; 
-  width: 95%;
   margin: 0 auto;
 }
 
 .intro-box {
+  width: 95%;
   background-color: #353535;
   padding: 1% 2%;
   margin: 40px auto;
   border-radius: 15px;
 }
-.intro-box>* {
-  font-size: 16px;
-  color: whitesmoke;
+.intro-box * {
+  font-size: 17px;
+  color: rgb(202, 210, 212);
 }
 .whoami {
   font-weight: bold;
-  color: whitesmoke;
+}
+.whoami > span {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 15px;
+  font-style: italic;
 }
 
-@keyframes blink-block {
-0%, 100% { 
-  visibility: visible;
-}
-50% { 
-  visibility: hidden;
-}
-}
-.blinking-cursor {
+.blink {
   display: inline-block;
-  width: 1ch;
-  height: 1.25em;
-  background-color: currentcolor;
-  animation: blink-block 1s steps(1, start) infinite;
-  vertical-align: text-bottom;
+  width: 0.6em;
+  background: currentColor;
+  animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.post-list {
+  padding: 0 30px;
+}
+.post-list  * {
+  color: black;
+  font-family: "Libre Baskerville", serif;
+  margin-bottom: 15px;
+}
+.post-list h1 {
+  margin-bottom: 25px;
+}
+.post-list a {
+  text-decoration: none;
+  background-color: #F2E39B;
+  padding: 2px 5px;
+  border-radius: 2px;
 }
 
 @media (max-width: 700px) {
@@ -51,12 +70,10 @@ body {
     border-radius: 10px;
   }
   .intro-box>* {
-    font-size: 16px;
-    color: whitesmoke;
   }
-}
 
-.post-list {
-  margin: 0 25px;
 
+  .post-list {
+    padding: 0 20px;
+  }
 }
