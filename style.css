@@ -3,30 +3,39 @@ body {
 }
 * {
   font-family: 'JetBrains Mono', monospace; 
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+.main-container {
+  max-width: 700px; 
+  width: 95%;
+  margin: 0 auto;
+}
+
 .intro-box {
-  max-width: 700px;
   background-color: #353535;
-  padding: 10px 20px;
+  padding: 1% 2%;
   margin: 40px auto;
   border-radius: 15px;
 }
 .intro-box>* {
-  font-size: 18px;
+  font-size: 16px;
+  color: whitesmoke;
+}
+.whoami {
+  font-weight: bold;
   color: whitesmoke;
 }
 
 @keyframes blink-block {
-  0%, 100% { 
-    visibility: visible;
-  }
-  50% { 
-    visibility: hidden;
-  }
+0%, 100% { 
+  visibility: visible;
+}
+50% { 
+  visibility: hidden;
+}
 }
 .blinking-cursor {
   display: inline-block;
@@ -35,4 +44,19 @@ body {
   background-color: currentcolor;
   animation: blink-block 1s steps(1, start) infinite;
   vertical-align: text-bottom;
+}
+
+@media (max-width: 700px) {
+  .intro-box {
+    border-radius: 10px;
+  }
+  .intro-box>* {
+    font-size: 16px;
+    color: whitesmoke;
+  }
+}
+
+.post-list {
+  margin: 0 25px;
+
 }
